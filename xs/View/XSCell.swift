@@ -10,8 +10,8 @@ import SwiftUI
 // aqui definimos las celdas de las publicaciones
 struct XSCell: View {
     var body: some View {
-        VStack{
-            HStack(alignment:.top){
+        VStack(alignment: .leading){
+            HStack(alignment:.top, spacing: 12){
                 // imagen de usuario
                 Image("venom-10")
                     .resizable()
@@ -81,6 +81,7 @@ struct XSCell: View {
             .padding(.horizontal)
             Divider()
         }
+        .padding(.leading, -16)
     }
 }
 
