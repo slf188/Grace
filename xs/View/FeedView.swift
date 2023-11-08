@@ -11,7 +11,11 @@ struct FeedView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView {
-                
+                VStack{
+                    ForEach(0..<20) { _ in
+                        XSCell()
+                    }
+                }.padding()
             }
             // boton para agregar una publicacion
             Button(action: {}, label: {
