@@ -29,8 +29,7 @@ struct ConversationsView: View {
                             destination: ChatView(),
                             label: {
                                 ConversationCell()
-                            }
-                        )
+                            })
                     }
                 }.padding()
             }

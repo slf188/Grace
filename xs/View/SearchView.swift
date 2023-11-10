@@ -14,14 +14,19 @@ struct SearchView: View {
         ScrollView {
             SearchBar(text: $searchText)
                 .padding()
-
+            
             VStack(alignment: .leading) {
                 // se utiliza un for para mostrar celdas de usuarios
                 ForEach(0..<19) { _ in
                     HStack {
                         Spacer()
                     }
-                    UserCell()
+                    // para llevar al perfil del usuario cuando damos click en la celda de los usuarios
+                    NavigationLink(
+                        destination: UserProfileView(),
+                        label: {
+                            UserCell()
+                        })
                 }
             }
             .padding(.leading)
