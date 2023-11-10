@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */; };
+		55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AB02AFE6C950092BC7F /* ConversationCell.swift */; };
 		55C2D12E2AFB4384006C1D0C /* xsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2D12D2AFB4384006C1D0C /* xsApp.swift */; };
 		55C2D1302AFB4384006C1D0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2D12F2AFB4384006C1D0C /* ContentView.swift */; };
 		55C2D1322AFB4385006C1D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C2D1312AFB4385006C1D0C /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		55B89AB02AFE6C950092BC7F /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		55C2D12A2AFB4384006C1D0C /* xs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C2D12D2AFB4384006C1D0C /* xsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xsApp.swift; sourceTree = "<group>"; };
 		55C2D12F2AFB4384006C1D0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55B89AAD2AFE6C630092BC7F /* Mensajes */ = {
+			isa = PBXGroup;
+			children = (
+				55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */,
+				55B89AB02AFE6C950092BC7F /* ConversationCell.swift */,
+			);
+			path = Mensajes;
+			sourceTree = "<group>";
+		};
 		55C2D1212AFB4384006C1D0C = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 				55E93E842AFBF8FA0033CE2A /* SearchView.swift */,
 				55E93E882AFBFD580033CE2A /* UserCell.swift */,
 				55E93E862AFBF9D20033CE2A /* SearchBar.swift */,
+				55B89AAD2AFE6C630092BC7F /* Mensajes */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,10 +193,12 @@
 				55E93E852AFBF8FA0033CE2A /* SearchView.swift in Sources */,
 				55C2D1302AFB4384006C1D0C /* ContentView.swift in Sources */,
 				55E93E812AFBEFFF0033CE2A /* FeedView.swift in Sources */,
+				55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */,
 				55E93E832AFBF2100033CE2A /* XSCell.swift in Sources */,
 				55C2D12E2AFB4384006C1D0C /* xsApp.swift in Sources */,
 				55E93E872AFBF9D20033CE2A /* SearchBar.swift in Sources */,
 				55E93E892AFBFD580033CE2A /* UserCell.swift in Sources */,
+				55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ struct SearchView: View {
                 .padding()
 
             VStack(alignment: .leading) {
+                // se utiliza un for para mostrar celdas de usuarios
                 ForEach(0..<19) { _ in
                     HStack {
                         Spacer()

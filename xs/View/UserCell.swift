@@ -10,6 +10,7 @@ import SwiftUI
 struct UserCell: View {
     var body: some View {
         HStack(spacing: 12) {
+            // icono del usuario
         Image ("venom-10")
             .resizable()
             .scaledToFill()
@@ -18,9 +19,10 @@ struct UserCell: View {
             .cornerRadius(28)
         
         VStack(alignment:.leading, spacing: 4) {
+            // username
             Text ("venom")
                 .font(.system(size: 14, weight: .semibold))
-                
+                // nombre del usuario
                 Text ("Eddie Brock")
                 .font(.system(size: 14))
             }

@@ -12,6 +12,7 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
+            // textfield para que el usuario pueda pasar input del usuario que quiere muscar
             TextField("Buscar...",text: $text)
                 .padding(8)
                 .padding(.horizontal, 24)
@@ -19,6 +20,7 @@ struct SearchBar: View {
                 .cornerRadius(8)
                 .overlay(
                     HStack {
+                        // icono de lupa
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity,
