@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// contiene la vista de lo que se mostrara en un nuevo mensaje
 struct ChatView: View {
     @State var textoMensaje: String = ""
     

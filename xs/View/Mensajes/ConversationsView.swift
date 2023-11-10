@@ -11,9 +11,16 @@ struct ConversationsView: View {
     // variable que va a ayudar a que se muestre con logica el view de mensajes
     // las variables con @state nos permiten modificar los valores dentro de un struct
     @State var estaMostrandoMessageView = false
+    @State var mostrarChat = false
     
     var body: some View {
         ZStack(alignment: .bottomTrailing){
+            NavigationLink(
+                destination: ChatView(),
+                isActive: $mostrarChat,
+                label: {}
+            )
+            
             ScrollView {
                 VStack{
                     ForEach(0..<20) { _ in
@@ -33,7 +40,7 @@ struct ConversationsView: View {
                 // icono
                 Image(systemName: "plus")
                     .resizable()
-                    // tamano
+                // tamano
                     .scaledToFit()
                     .frame(width: 32, height: 32)
                     .padding()
@@ -44,7 +51,7 @@ struct ConversationsView: View {
             .clipShape(Circle())
             .padding()
             .sheet(isPresented: $estaMostrandoMessageView, content: {
-                SearchView()
+                NewMessageView(iniciarChat: $mostrarChat, mostrar: $estaMostrandoMessageView)
             })
         }
     }
