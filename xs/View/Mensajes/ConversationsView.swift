@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConversationsView: View {
     // variable que va a ayudar a que se muestre con logica el view de mensajes
+    // las variables con @state nos permiten modificar los valores dentro de un struct
     @State var estaMostrandoMessageView = false
     
     var body: some View {
@@ -18,7 +19,7 @@ struct ConversationsView: View {
                     ForEach(0..<20) { _ in
                         // para hacer un link de navegacion que nos lleve a una pagina para ver la conversacion con otro usuario
                         NavigationLink(
-                            destination: Text("H"),
+                            destination: ChatView(),
                             label: {
                                 ConversationCell()
                             }
