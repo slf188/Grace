@@ -29,6 +29,7 @@ struct ConversationCell: View {
                     // para que se muestre el texto de los mensajes
                     .lineLimit(2)
                 }
+            .foregroundColor(.black)
             .padding(.trailing)
             }
             Divider()
