@@ -11,11 +11,11 @@ struct MessageInputView: View {
     // variable para almacenar el mensaje
     // una variable que posee el atributo @Binding significa que esta enlazada a algo mas
     // en este caso esta enlazada al mensaje que se va a enviar, al textfield
-    @Binding var messageText: String
+    @Binding var textoMensaje: String
     var body: some View {
         HStack {
             // textfield para que el usuario pueda ingresar su mensaje
-            TextField("Mensaje...", text: $messageText)
+            TextField("Mensaje...", text: $textoMensaje)
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight:30)
             // que se va a realizar cuando se presione en enviar el mensaje
@@ -28,6 +28,6 @@ struct MessageInputView: View {
 
 struct MessageInputView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageInputView(messageText: .constant("Mensaje..."))
+        MessageInputView(textoMensaje: .constant("Mensaje..."))
     }
 }
