@@ -50,6 +50,7 @@ struct ProfileHeaderView: View {
                 }
             }
             .padding()
+            ProfileActionButtonView(esElUsuarioActual: true)
             Spacer()
         }
     }
