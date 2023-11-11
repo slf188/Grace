@@ -25,9 +25,11 @@ struct UserProfileView: View {
 //                ProfileHeaderView(viewModel: viewModel)
 //                    .padding()
                 
+                // opciones, publicacion, replicas, likes
                 FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
                     .padding()
                 
+                // celdas de publicaciones
                 ForEach(0..<9) { publicacion in
                     XSCell()
                 }
