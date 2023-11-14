@@ -10,19 +10,19 @@ import SwiftUI
 struct NewPostView: View {
     // para trackear si se esta presentando o no newpostview
     @Binding var sePresenta: Bool
+    @State var textoDescripcion: String = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
+                HStack(alignment: .top) {
                     Image ("batman")
                         .resizable()
                         .scaledToFill()
                         .clipped()
                         .frame(width: 64, height: 64)
                         .cornerRadius(32)
-                    Text ("What's happening?")
-                        .foregroundColor(.gray)
+                    TextArea("hey", texto: $textoDescripcion)
                     Spacer()
                 }
                 .padding()
