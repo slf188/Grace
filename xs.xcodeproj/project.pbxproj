@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5521FAAC2B0327F200779248 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521FAAB2B0327F200779248 /* NewPostView.swift */; };
 		55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */; };
 		55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AB02AFE6C950092BC7F /* ConversationCell.swift */; };
 		55B89AB32AFE73150092BC7F /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AB22AFE73150092BC7F /* MessageInputView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5521FAAB2B0327F200779248 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		55B89AB02AFE6C950092BC7F /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		55B89AB22AFE73150092BC7F /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5521FAAA2B0327CE00779248 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				5521FAAB2B0327F200779248 /* NewPostView.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
 		55B89AAD2AFE6C630092BC7F /* Mensajes */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 				55E93E842AFBF8FA0033CE2A /* SearchView.swift */,
 				55E93E882AFBFD580033CE2A /* UserCell.swift */,
 				55E93E862AFBF9D20033CE2A /* SearchBar.swift */,
+				5521FAAA2B0327CE00779248 /* Posts */,
 				55B89AAD2AFE6C630092BC7F /* Mensajes */,
 			);
 			path = View;
@@ -247,6 +258,7 @@
 				55E93E892AFBFD580033CE2A /* UserCell.swift in Sources */,
 				55B89ABB2AFE7E920092BC7F /* MessageView.swift in Sources */,
 				55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */,
+				5521FAAC2B0327F200779248 /* NewPostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

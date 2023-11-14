@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeedView: View {
+    // para mostrar o no mostrar el NewPostView
+    @State var estaMostrandoNuevaPublicacion = false
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView {
@@ -18,7 +21,8 @@ struct FeedView: View {
                 }.padding()
             }
             // boton para agregar una publicacion
-            Button(action: {}, label: {
+            // toggle de la variable estaMostrandoNuevaPublicacion
+            Button(action: { estaMostrandoNuevaPublicacion.toggle() }, label: {
                 // icono
                 Image(systemName: "plus")
                     .resizable()
@@ -31,6 +35,10 @@ struct FeedView: View {
             .foregroundColor(.white)
             .clipShape(Circle())
             .padding()
+            // aqui se utiliza el componente sheet para mostrar el view NewPost cuando se cambia a true la variable
+            .sheet(isPresented: $estaMostrandoNuevaPublicacion) {
+                NewPostView(sePresenta: $estaMostrandoNuevaPublicacion)
+            }
         }
     }
 }
