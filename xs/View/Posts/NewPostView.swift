@@ -48,6 +48,6 @@ struct NewPostView: View {
 
 struct NewPostView_Previews: PreviewProvider {
     static var previews: some View {
-        NewPostView(sePresenta: .constant(true))
+        NewPostView(sePresenta: .constant(false))
     }
 }

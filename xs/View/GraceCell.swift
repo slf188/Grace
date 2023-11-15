@@ -8,7 +8,7 @@
 import SwiftUI
 
 // aqui definimos las celdas de las publicaciones
-struct XSCell: View {
+struct GraceCell: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack(alignment:.top, spacing: 12){
@@ -87,6 +87,6 @@ struct XSCell: View {
 
 struct XSCell_Previews: PreviewProvider {
     static var previews: some View {
-        XSCell()
+        GraceCell()
     }
 }

@@ -31,7 +31,7 @@ struct UserProfileView: View {
                 
                 // celdas de publicaciones
                 ForEach(0..<9) { publicacion in
-                    XSCell()
+                    GraceCell()
                 }
             }
             .navigationTitle("batman")
