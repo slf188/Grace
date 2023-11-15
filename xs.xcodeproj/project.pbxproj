@@ -24,6 +24,7 @@
 		55D8314C2B04801400B2712F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8314B2B04801400B2712F /* LoginView.swift */; };
 		55D8314E2B04801A00B2712F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8314D2B04801A00B2712F /* RegistrationView.swift */; };
 		55D831502B04813200B2712F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8314F2B04813200B2712F /* CustomTextField.swift */; };
+		55D831522B04856900B2712F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D831512B04856900B2712F /* CustomSecureField.swift */; };
 		55E828342AFEB9B300D40D98 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828332AFEB9B300D40D98 /* UserProfileView.swift */; };
 		55E828362AFEBA6D00D40D98 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828352AFEBA6D00D40D98 /* ProfileHeaderView.swift */; };
 		55E828382AFEBA8000D40D98 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828372AFEBA8000D40D98 /* ProfileActionButtonView.swift */; };
@@ -54,6 +55,7 @@
 		55D8314B2B04801400B2712F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		55D8314D2B04801A00B2712F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		55D8314F2B04813200B2712F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		55D831512B04856900B2712F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		55E828332AFEB9B300D40D98 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		55E828352AFEBA6D00D40D98 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		55E828372AFEBA8000D40D98 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				5521FAAF2B032C8800779248 /* TextArea.swift */,
 				55D8314F2B04813200B2712F /* CustomTextField.swift */,
+				55D831512B04856900B2712F /* CustomSecureField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				55E93E892AFBFD580033CE2A /* UserCell.swift in Sources */,
 				55D831502B04813200B2712F /* CustomTextField.swift in Sources */,
 				55B89ABB2AFE7E920092BC7F /* MessageView.swift in Sources */,
+				55D831522B04856900B2712F /* CustomSecureField.swift in Sources */,
 				55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */,
 				5521FAAC2B0327F200779248 /* NewPostView.swift in Sources */,
 			);

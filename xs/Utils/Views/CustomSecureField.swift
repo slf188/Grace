@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  CustomSecureField.swift
 //  xs
 //
 //  Created by Felipe Vallejo on 14/11/23.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct CustomSecureField: View {
     @Binding var texto: String
     let descripcion: Text
-    let nombreImagen: String
     
     var body: some View {
         ZStack(alignment:.leading) {
@@ -21,12 +20,12 @@ struct CustomTextField: View {
                     .padding (.leading, 40)
             }
             HStack(spacing: 16) {
-                Image (systemName:nombreImagen)
+                Image (systemName:"lock")
                     .resizable()
                     .scaledToFit()
                     .frame (width: 20, height: 20)
-                // textfield por que solo ingresaremos emails que si se pueden ver
-                TextField("", text:$texto)
+                // secure field esta vez por que vamos a ingresar contrasenas
+                SecureField("", text:$texto)
             }
         }
     }
