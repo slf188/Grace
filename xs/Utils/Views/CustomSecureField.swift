@@ -26,6 +26,8 @@ struct CustomSecureField: View {
                     .frame (width: 20, height: 20)
                 // secure field esta vez por que vamos a ingresar contrasenas
                 SecureField("", text:$texto)
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
             }
         }
     }

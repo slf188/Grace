@@ -19,6 +19,7 @@ struct RegistrationView: View {
     @State var mostrarImagePicker = false
     // para cerrar una pantalla vamos a utilizar la siguiente variable
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject var viewModel = AuthViewModel()
     
     // funcion que va a transformar la imagen seleccionada a una SwiftUIImage
     func cargarImagen(){
@@ -82,7 +83,10 @@ struct RegistrationView: View {
                 }
                 .padding(.horizontal, 32)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    guard let image = imagenUISeleccionada else { return }
+                    viewModel.registerUser(email: email, password: contraseña, username: usuario, fullname: nombre, profileImage: image)
+                }, label: {
                     Text ("Registrar")
                         .font(.headline)
                         .foregroundColor(.black)

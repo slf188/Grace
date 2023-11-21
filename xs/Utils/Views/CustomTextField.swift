@@ -27,6 +27,10 @@ struct CustomTextField: View {
                     .frame (width: 20, height: 20)
                 // textfield por que solo ingresaremos emails que si se pueden ver
                 TextField("", text:$texto)
+                    // para que no esten en mayuscula la primera letra que se escriba
+                    // para que no exista autocorrector
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
             }
         }
     }
