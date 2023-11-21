@@ -31,7 +31,8 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to login: \(error.localizedDescription)")
                 return
             }
-            print("DEBUG: Successfully logged in")
+            // la variable que va a trackear que ya esta logueado el usuario
+            self.userSession = result?.user
         }
     }
     
@@ -72,7 +73,7 @@ class AuthViewModel: ObservableObject {
                                 "uid": user.uid]
                     
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
-                        print("DEBUG: Exitosamente se guardaron los datos del usuario")
+                        self.userSession = user
                     }
                 }
             }

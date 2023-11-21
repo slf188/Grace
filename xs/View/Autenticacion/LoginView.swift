@@ -11,8 +11,8 @@ struct LoginView: View {
     // dos variables para contener la entrada del usuario
     @State var email = ""
     @State var contraseña = ""
-    @ObservedObject var viewModel = AuthViewModel()
-
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             ZStack {
