@@ -11,6 +11,7 @@ struct LoginView: View {
     // dos variables para contener la entrada del usuario
     @State var email = ""
     @State var contraseña = ""
+    @ObservedObject var viewModel = AuthViewModel()
 
     var body: some View {
         NavigationView {
@@ -49,7 +50,9 @@ struct LoginView: View {
                                 .padding(.trailing, 32)
                         })
                     }
-                    Button(action: {}, label: {
+                    Button(action: {
+                        viewModel.login(withEmail: email, password: contraseña)
+                    }, label: {
                         Text ("Iniciar Sesion")
                             .font(.headline)
                             .foregroundColor(.black)

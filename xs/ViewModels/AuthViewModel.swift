@@ -10,13 +10,33 @@ import Firebase
 import FirebaseStorage
 
 class AuthViewModel: ObservableObject {
+    // necesitaremos de dos variables para poder verificar si el usuario ha sido autenticado o no
+    @Published var userSession: FirebaseAuth.User?
+    // para ver si el proceso de autenticar esta aun ejecutandose
+    @Published var isAuthenticating = false
+    // para mostrar si hubo un error al momento de autenticar
+    @Published var error: Error?
+    @Published var user: User?
     
-    func login() {
-        
+    // un bloque init para cuando instanciemos el AuthViewModel
+    init(){
+        // verificar si el usuario esta logueado o no:
+        userSession = Auth.auth().currentUser
+    }
+    
+    func login(withEmail email: String, password: String) {
+        // para crear un usuario no necesitamos mas que utilizar la funcion signIn!
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to login: \(error.localizedDescription)")
+                return
+            }
+            print("DEBUG: Successfully logged in")
+        }
     }
     
     func registerUser(email: String, password: String, username: String, fullname: String, profileImage: UIImage) {
-        
+        // antes de registrar al usuario necesito primero procesar la imagen que esta subiendo:
         guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
         
         let filename = NSUUID().uuidString
@@ -31,8 +51,12 @@ class AuthViewModel: ObservableObject {
             
             print("Exitosamente se guardo la foto del usuario")
             
+            
             storageRef.downloadURL { url, _ in
                 guard let profileImageUrl = url?.absoluteString else { return }
+                
+                // ahora que ya se ha procesado correctamente la imagen del usuario procedemos a llamar
+                // la funcion createUser de firebase para registrar un nuevo usuario
                 
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     if let error = error {
@@ -53,5 +77,10 @@ class AuthViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func cerrarSesion(){
+        userSession = nil
+        try? Auth.auth().signOut()
     }
 }

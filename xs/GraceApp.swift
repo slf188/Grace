@@ -17,9 +17,10 @@ struct GraceApp: App {
     
     var body: some Scene {
         WindowGroup {
+            ContentView().environmentObject(AuthViewModel())
             // cuando iniciamos un proyecto en swiftui inicialmente nos muestra ContentView()
 //            ContentView()
-            LoginView()
+//            LoginView()
         }
     }
 }

@@ -8,34 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        NavigationView {
-            TabView {
-                FeedView()
-                    // boton inicio
-                    .tabItem {
-                        // icono
-                        Image(systemName: "house")
-                        // texto del boton
-                        Text("Inicio")
+        // group nos ayudara a separar las pantallas que se mostraran en el inicio de la aplicacion
+        Group {
+            // si el usuario se ha logueado mostrar el main interface de la aplicacion
+            if viewModel.userSession != nil {
+                NavigationView {
+                    TabView {
+                        FeedView()
+                        // boton inicio
+                            .tabItem {
+                                // icono
+                                Image(systemName: "house")
+                                // texto del boton
+                                Text("Inicio")
+                            }
+                        
+                        SearchView()
+                        // boton busqueda
+                            .tabItem {
+                                Image(systemName:"magnifyingglass")
+                                Text("Busqueda")
+                            }
+                        
+                        ConversationsView()
+                            .tabItem {
+                                Image(systemName:"envelope")
+                                Text("Mensajes")
+                            }
                     }
-                
-                SearchView()
-                    // boton busqueda
-                    .tabItem {
-                        Image(systemName:"magnifyingglass")
-                        Text("Busqueda")
-                    }
-                
-                ConversationsView()
-                    .tabItem {
-                        Image(systemName:"envelope")
-                        Text("Mensajes")
-                    }
+                    .navigationBarTitle("Inicio")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
+            } else {
+                LoginView()
             }
-            .navigationBarTitle("Inicio")
-            .navigationBarTitleDisplayMode(.inline)
-            
         }
     }
 }
