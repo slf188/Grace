@@ -22,6 +22,7 @@ class AuthViewModel: ObservableObject {
     init(){
         // verificar si el usuario esta logueado o no:
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func login(withEmail email: String, password: String) {
@@ -83,5 +84,15 @@ class AuthViewModel: ObservableObject {
     func cerrarSesion(){
         userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    // funcion actual que nos ayudara a retrieve informacion acerca del usuario logueado
+    func fetchUser(){
+        guard let uid = userSession?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
+            guard let data = snapshot?.data() else { return }
+            let user = User(dictionary: data)
+            print("DEBUG: User is \(user.username)")
+        }
     }
 }
