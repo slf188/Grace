@@ -17,7 +17,9 @@ struct FeedView: View {
             ScrollView {
                 VStack{
                     ForEach(viewModel.posts) { post in
-                        GraceCell(post: post)
+                        NavigationLink(destination: PostDetailView(post: post)) {
+                            GraceCell(post: post)
+                        }
                     }
                 }.padding()
             }

@@ -28,6 +28,7 @@ struct GraceCell: View {
                         // nombre
                         Text(post.fullname)
                             .font(.system(size: 14, weight: .semibold))
+                            .foregroundColor(.black)
                     
                         // usuario
                         Text("@\(post.username) •")
@@ -39,48 +40,14 @@ struct GraceCell: View {
                     }
                     // contenido de publicacion
                     Text(post.caption)
+                        .foregroundColor(.black)
                 }
             }
             .padding(.bottom)
             .padding(.trailing)
             
-            // todos los botones y las acciones que se pueden hacer en una publicacion
-            HStack {
-                Button(action: {}, label: {
-                    Image (systemName:"bubble.left")
-                        .font(.system(size: 16))
-                        .frame (width: 32, height: 32)
-                })
-                
-                
-                Spacer ()
-                
-                Button(action: {}, label: {
-                    Image (systemName:"arrow.2.squarepath")
-                        .font(.system(size: 16))
-                        .frame (width: 32, height: 32)
-                    
-                })
-                
-                Spacer()
-                
-                Button(action: {}, label: {
-                    Image(systemName:"heart")
-                        .font(.system(size: 16))
-                        .frame(width: 32, height: 32)
-                    
-                })
-                
-                Spacer()
-                
-                Button(action: {}, label: {
-                    Image (systemName:"bookmark")
-                        .font(.system(size: 16))
-                        .frame (width: 32, height: 32)
-                })
-            }
-            .foregroundColor (.gray)
-            .padding(.horizontal)
+            PostActionsView()
+            
             Divider()
         }
         .padding(.leading, -16)
