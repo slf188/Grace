@@ -28,7 +28,7 @@ struct SearchView: View {
                     }
                     // para llevar al perfil del usuario cuando damos click en la celda de los usuarios
                     NavigationLink(
-                        destination: UserProfileView(),
+                        destination: UserProfileView(user: user),
                         label: {
                             UserCell(user: user)
                         })

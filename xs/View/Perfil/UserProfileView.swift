@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    // 30
-//    let user: User
+    let user: User
     //  45
 //    @ObservedObject var viewModel: ProfileViewModel
     @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
@@ -22,8 +21,8 @@ struct UserProfileView: View {
     var body: some View {
         ScrollView {
             VStack {
-//                ProfileHeaderView(viewModel: viewModel)
-//                    .padding()
+                ProfileHeaderView(user: user)
+                    .padding()
                 
                 // opciones, publicacion, replicas, likes
                 FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
@@ -36,11 +35,5 @@ struct UserProfileView: View {
             }
             .navigationTitle("batman")
         }
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView()
     }
 }
