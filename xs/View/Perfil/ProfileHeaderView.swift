@@ -9,12 +9,14 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct ProfileHeaderView: View {
-//    @State var selectedFilter:
-    let user: User
+    @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
+    let viewModel: ProfileViewModel
+    @Binding var isFollowed: Bool
+    
     var body: some View {
         VStack {
             // informacion del perfil
-            KFImage(URL(string: user.profileImageUrl))
+            KFImage(URL(string: viewModel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -22,11 +24,11 @@ struct ProfileHeaderView: View {
                 .cornerRadius (120 / 2)
                 .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
             // nombre
-            Text(user.fullname)
+            Text(viewModel.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .padding(.top, 8)
             // usuario
-            Text("\(user.username)")
+            Text("\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             // info
@@ -53,7 +55,11 @@ struct ProfileHeaderView: View {
                 }
             }
             .padding()
-            ProfileActionButtonView(esElUsuarioActual: user.isCurrentUser)
+            ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
+            
+            FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
+                .padding()
+            
             Spacer()
         }
     }

@@ -9,23 +9,17 @@ import SwiftUI
 
 struct UserProfileView: View {
     let user: User
-    //  45
-//    @ObservedObject var viewModel: ProfileViewModel
-    @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
+    @ObservedObject var viewModel: ProfileViewModel
     
-//    init(user: User){
-//        self.user = user
-//        self.viewModel = ProfileViewModel(user: user)
-//    }
+    init(user: User){
+        self.user = user
+        self.viewModel = ProfileViewModel(user: user)
+    }
     
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeaderView(user: user)
-                    .padding()
-                
-                // opciones, publicacion, replicas, likes
-                FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
+                ProfileHeaderView(viewModel: viewModel, isFollowed: $viewModel.isFollowed)
                     .padding()
                 
                 // celdas de publicaciones

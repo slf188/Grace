@@ -10,6 +10,7 @@
 		5507D5FD2B0DA3900055BAAD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D5FC2B0DA3900055BAAD /* SearchViewModel.swift */; };
 		5507D5FF2B0DA3DA0055BAAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D5FE2B0DA3DA0055BAAD /* Constants.swift */; };
 		5507D6022B0DADF20055BAAD /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5507D6012B0DADF20055BAAD /* KingfisherSwiftUI */; };
+		5507D6042B0DB37A0055BAAD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */; };
 		5521FAAC2B0327F200779248 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521FAAB2B0327F200779248 /* NewPostView.swift */; };
 		5521FAB02B032C8800779248 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521FAAF2B032C8800779248 /* TextArea.swift */; };
 		552DDB152B0C71850086F8B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DDB142B0C71850086F8B0 /* User.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		5507D5FC2B0DA3900055BAAD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5507D5FE2B0DA3DA0055BAAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5521FAAB2B0327F200779248 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		5521FAAF2B032C8800779248 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		552DDB142B0C71850086F8B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				555BD80C2B0C5E37006395E6 /* AuthViewModel.swift */,
 				5507D5FC2B0DA3900055BAAD /* SearchViewModel.swift */,
+				5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */,
 				55D8314C2B04801400B2712F /* LoginView.swift in Sources */,
 				55E8283A2AFEBA8C00D40D98 /* FilterButtonView.swift in Sources */,
+				5507D6042B0DB37A0055BAAD /* ProfileViewModel.swift in Sources */,
 				55E93E832AFBF2100033CE2A /* GraceCell.swift in Sources */,
 				55B89AB72AFE76720092BC7F /* ChatBubble.swift in Sources */,
 				556A56132B0527BC00AFE465 /* ImagePicker.swift in Sources */,
