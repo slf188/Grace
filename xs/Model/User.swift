@@ -23,3 +23,4 @@ struct User: Identifiable {
         self.fullname = dictionary["fullname"] as? String ?? ""
     }
 }
+

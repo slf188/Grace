@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
+    @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
         ScrollView {
@@ -17,7 +18,11 @@ struct SearchView: View {
             
             VStack(alignment: .leading) {
                 // se utiliza un for para mostrar celdas de usuarios
-                ForEach(0..<19) { _ in
+                /* previamente utilizamos un hardcoded value de 0..10
+                 ahora lo poblaremos solo con los usuarios que existen
+                 registrados en la aplicacion
+                 */
+                ForEach(viewModel.users) { user in
                     HStack {
                         Spacer()
                     }
@@ -25,7 +30,7 @@ struct SearchView: View {
                     NavigationLink(
                         destination: UserProfileView(),
                         label: {
-                            UserCell()
+                            UserCell(user: user)
                         })
                 }
             }
