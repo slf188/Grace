@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct NewPostView: View {
     // para trackear si se esta presentando o no newpostview
@@ -16,13 +17,17 @@ struct NewPostView: View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    Image ("batman")
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 64, height: 64)
-                        .cornerRadius(32)
+                    if let user = AuthViewModel.shared.user {
+                        KFImage(URL(string:user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 64, height: 64)
+                            .cornerRadius(32)
+                    }
+                    
                     TextArea("hey", texto: $textoDescripcion)
+                    
                     Spacer()
                 }
                 .padding()

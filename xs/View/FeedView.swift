@@ -24,23 +24,23 @@ struct FeedView: View {
             // boton para agregar una publicacion
             // toggle de la variable estaMostrandoNuevaPublicacion
             Button(action: {
-                viewModel.cerrarSesion()
-//                estaMostrandoNuevaPublicacion.toggle()
+                estaMostrandoNuevaPublicacion.toggle()
             }, label: {
                 // icono
                 Image(systemName: "plus")
                     .resizable()
+                    .renderingMode(.template)
                     // tamano
                     .frame(width: 32, height: 32)
                     .padding()
             })
             // color
-            .background(Color(.systemGray))
+            .background(Color(.black))
             .foregroundColor(.white)
             .clipShape(Circle())
             .padding()
-            // aqui se utiliza el componente sheet para mostrar el view NewPost cuando se cambia a true la variable
-            .sheet(isPresented: $estaMostrandoNuevaPublicacion) {
+            // aqui se utiliza el componente fullscreencover para mostrar el view NewPost cuando se cambia a true la variable
+            .fullScreenCover(isPresented: $estaMostrandoNuevaPublicacion) {
                 NewPostView(sePresenta: $estaMostrandoNuevaPublicacion)
             }
         }

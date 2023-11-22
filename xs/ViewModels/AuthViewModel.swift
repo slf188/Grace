@@ -17,6 +17,11 @@ class AuthViewModel: ObservableObject {
     // para mostrar si hubo un error al momento de autenticar
     @Published var error: Error?
     @Published var user: User?
+    // para podre compartir en newpostview
+    // cuando hacemos que la variable sea estatica nos aseguramos de que unicamente crearemos una instancia de ese objeto
+    // con esto podremos utilizarla a traves de toda nuestra aplicacion
+    // es como la alternativa de una variable global
+    static let shared = AuthViewModel()
     
     // un bloque init para cuando instanciemos el AuthViewModel
     init(){
@@ -34,6 +39,8 @@ class AuthViewModel: ObservableObject {
             }
             // la variable que va a trackear que ya esta logueado el usuario
             self.userSession = result?.user
+            // para que se muestre la imagen correcta del usuario
+            self.fetchUser()
         }
     }
     
@@ -50,8 +57,6 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to upload image \(error.localizedDescription)")
                 return
             }
-            
-            print("Exitosamente se guardo la foto del usuario")
             
             
             storageRef.downloadURL { url, _ in
@@ -75,6 +80,8 @@ class AuthViewModel: ObservableObject {
                     
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         self.userSession = user
+                        // hacemos fetch de los datos del usuario despues de que se hayan cargado
+                        self.fetchUser()
                     }
                 }
             }
@@ -91,8 +98,7 @@ class AuthViewModel: ObservableObject {
         guard let uid = userSession?.uid else { return }
         Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
             guard let data = snapshot?.data() else { return }
-            let user = User(dictionary: data)
-            print("DEBUG: User is \(user.username)")
+            self.user = User(dictionary: data)
         }
     }
 }
