@@ -12,6 +12,12 @@ struct NewPostView: View {
     // para trackear si se esta presentando o no newpostview
     @Binding var sePresenta: Bool
     @State var textoDescripcion: String = ""
+    @ObservedObject var viewModel: UploadPostViewModel
+    
+    init(isPresented: Binding<Bool>){
+        self._sePresenta = isPresented
+        self.viewModel = UploadPostViewModel(isPresented: isPresented)
+    }
     
     var body: some View {
         NavigationView {
@@ -36,8 +42,12 @@ struct NewPostView: View {
                 }, label: {
                     Text ("Cancel")
                         .foregroundColor(.black)
-                }),
-                                    trailing: Button(action: {}, label: {
+                }), trailing: Button(action: {
+                    viewModel.uploadPost(caption: textoDescripcion)
+//                    viewModel.uploadPost(caption: textoDescripcion) { _ in
+//                        sePresenta.toggle()
+//                    }
+                }, label: {
                     Text ("Publicar")
                         .padding(.horizontal)
                         .padding(.vertical, 8)
@@ -53,6 +63,6 @@ struct NewPostView: View {
 
 struct NewPostView_Previews: PreviewProvider {
     static var previews: some View {
-        NewPostView(sePresenta: .constant(false))
+        NewPostView(isPresented: .constant(false))
     }
 }

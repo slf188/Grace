@@ -10,14 +10,14 @@ import SwiftUI
 struct FeedView: View {
     // para mostrar o no mostrar el NewPostView
     @State var estaMostrandoNuevaPublicacion = false
-    @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView {
                 VStack{
-                    ForEach(0..<20) { _ in
-                        GraceCell()
+                    ForEach(viewModel.posts) { post in
+                        GraceCell(post: post)
                     }
                 }.padding()
             }
@@ -41,7 +41,7 @@ struct FeedView: View {
             .padding()
             // aqui se utiliza el componente fullscreencover para mostrar el view NewPost cuando se cambia a true la variable
             .fullScreenCover(isPresented: $estaMostrandoNuevaPublicacion) {
-                NewPostView(sePresenta: $estaMostrandoNuevaPublicacion)
+                NewPostView(isPresented: $estaMostrandoNuevaPublicacion)
             }
         }
     }

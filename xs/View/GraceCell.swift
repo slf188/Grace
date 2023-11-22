@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 // aqui definimos las celdas de las publicaciones
 struct GraceCell: View {
+    let post: Post
     var body: some View {
         VStack(alignment: .leading){
             HStack(alignment:.top, spacing: 12){
                 // imagen de usuario
-                Image("venom-10")
+                KFImage(URL(string: post.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipped()
@@ -24,19 +26,19 @@ struct GraceCell: View {
                 VStack(alignment: .leading, spacing: 4){
                     HStack {
                         // nombre
-                        Text ("Brock")
+                        Text(post.fullname)
                             .font(.system(size: 14, weight: .semibold))
                     
                         // usuario
-                        Text ("@venom •")
+                        Text("@\(post.username) •")
                             .foregroundColor (.gray)
                     
                         // fecha
-                        Text ("2w")
+                        Text("2w")
                             .foregroundColor (.gray)
                     }
                     // contenido de publicacion
-                    Text("por ser amable me tachan de mujeriego")
+                    Text(post.caption)
                 }
             }
             .padding(.bottom)
@@ -82,11 +84,5 @@ struct GraceCell: View {
             Divider()
         }
         .padding(.leading, -16)
-    }
-}
-
-struct XSCell_Previews: PreviewProvider {
-    static var previews: some View {
-        GraceCell()
     }
 }

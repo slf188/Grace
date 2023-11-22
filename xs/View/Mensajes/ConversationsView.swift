@@ -45,7 +45,7 @@ struct ConversationsView: View {
                     .padding()
             })
             // color
-            .background(Color(.systemGray))
+            .background(Color(.black))
             .foregroundColor(.white)
             .clipShape(Circle())
             .padding()

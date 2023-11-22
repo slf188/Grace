@@ -19,6 +19,9 @@
 		5557E16C2B0C063B005E4FD6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5557E16B2B0C063B005E4FD6 /* FirebaseFirestore */; };
 		5557E16E2B0C063B005E4FD6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5557E16D2B0C063B005E4FD6 /* FirebaseStorage */; };
 		555BD80D2B0C5E37006395E6 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BD80C2B0C5E37006395E6 /* AuthViewModel.swift */; };
+		556344A42B0E64EA0010D957 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556344A32B0E64EA0010D957 /* UploadPostViewModel.swift */; };
+		556344A62B0E6E590010D957 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556344A52B0E6E590010D957 /* FeedViewModel.swift */; };
+		556344AA2B0E6EC90010D957 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556344A92B0E6EC90010D957 /* Post.swift */; };
 		556A56132B0527BC00AFE465 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A56122B0527BC00AFE465 /* ImagePicker.swift */; };
 		55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */; };
 		55B89AB12AFE6C950092BC7F /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89AB02AFE6C950092BC7F /* ConversationCell.swift */; };
@@ -56,6 +59,9 @@
 		552DDB142B0C71850086F8B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5557E1662B0C0535005E4FD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		555BD80C2B0C5E37006395E6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		556344A32B0E64EA0010D957 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		556344A52B0E6E590010D957 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		556344A92B0E6EC90010D957 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		556A56122B0527BC00AFE465 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		55B89AAE2AFE6C820092BC7F /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		55B89AB02AFE6C950092BC7F /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 			children = (
 				55B89AB82AFE79820092BC7F /* Message.swift */,
 				552DDB142B0C71850086F8B0 /* User.swift */,
+				556344A92B0E6EC90010D957 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,8 +238,10 @@
 			isa = PBXGroup;
 			children = (
 				555BD80C2B0C5E37006395E6 /* AuthViewModel.swift */,
+				556344A32B0E64EA0010D957 /* UploadPostViewModel.swift */,
 				5507D5FC2B0DA3900055BAAD /* SearchViewModel.swift */,
 				5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */,
+				556344A52B0E6E590010D957 /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -323,12 +332,14 @@
 				55D8314E2B04801A00B2712F /* RegistrationView.swift in Sources */,
 				55B89AB32AFE73150092BC7F /* MessageInputView.swift in Sources */,
 				55C2D1302AFB4384006C1D0C /* ContentView.swift in Sources */,
+				556344A62B0E6E590010D957 /* FeedViewModel.swift in Sources */,
 				5507D5FF2B0DA3DA0055BAAD /* Constants.swift in Sources */,
 				55E93E812AFBEFFF0033CE2A /* FeedView.swift in Sources */,
 				55E828362AFEBA6D00D40D98 /* ProfileHeaderView.swift in Sources */,
 				55B89AB52AFE73A20092BC7F /* ChatView.swift in Sources */,
 				55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */,
 				55D8314C2B04801400B2712F /* LoginView.swift in Sources */,
+				556344A42B0E64EA0010D957 /* UploadPostViewModel.swift in Sources */,
 				55E8283A2AFEBA8C00D40D98 /* FilterButtonView.swift in Sources */,
 				5507D6042B0DB37A0055BAAD /* ProfileViewModel.swift in Sources */,
 				55E93E832AFBF2100033CE2A /* GraceCell.swift in Sources */,
@@ -337,6 +348,7 @@
 				55C2D12E2AFB4384006C1D0C /* GraceApp.swift in Sources */,
 				55B89ABD2AFE81EC0092BC7F /* NewMessageView.swift in Sources */,
 				55B89AB92AFE79820092BC7F /* Message.swift in Sources */,
+				556344AA2B0E6EC90010D957 /* Post.swift in Sources */,
 				555BD80D2B0C5E37006395E6 /* AuthViewModel.swift in Sources */,
 				5507D5FD2B0DA3900055BAAD /* SearchViewModel.swift in Sources */,
 				55E828342AFEB9B300D40D98 /* UserProfileView.swift in Sources */,

@@ -23,8 +23,9 @@ struct UserProfileView: View {
                     .padding()
                 
                 // celdas de publicaciones
-                ForEach(0..<9) { publicacion in
-                    GraceCell()
+                ForEach(0..<9) { post in
+//                    GraceCell()
+//                        .padding()
                 }
             }
             .navigationTitle("batman")
