@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct PostActionsView: View {
+    let post: Post
+    @ObservedObject var viewModel: PostActionViewModel
+    
+    init(post: Post){
+        self.post = post
+        self.viewModel = PostActionViewModel(post: post)
+    }
+    
     var body: some View {
         // todos los botones y las acciones que se pueden hacer en una publicacion
         HStack {
@@ -29,10 +37,13 @@ struct PostActionsView: View {
             
             Spacer()
             
-            Button(action: {}, label: {
-                Image(systemName:"heart")
+            Button(action: {
+                viewModel.didlike ? viewModel.unlikePost() : viewModel.likePost()
+            }, label: {
+                Image(systemName: viewModel.didLike ? "heart.fill" : "heart")
                     .font(.system(size: 16))
                     .frame(width: 32, height: 32)
+                    .foregroundColor(viewModel.didLike ? .red : .gray)
                 
             })
             
@@ -46,11 +57,5 @@ struct PostActionsView: View {
         }
         .foregroundColor (.gray)
         .padding(.horizontal)
-    }
-}
-
-struct PostActionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostActionsView()
     }
 }

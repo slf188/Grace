@@ -46,7 +46,7 @@ struct GraceCell: View {
             .padding(.bottom)
             .padding(.trailing)
             
-            PostActionsView()
+            PostActionsView(post: post)
             
             Divider()
         }

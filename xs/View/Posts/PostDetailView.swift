@@ -57,7 +57,7 @@ struct PostDetailView: View {
             }
             Divider()
             
-            PostActionsView()
+            PostActionsView(post: post)
             
             Spacer()
         }.padding()

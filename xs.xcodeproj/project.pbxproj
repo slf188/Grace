@@ -33,6 +33,7 @@
 		55B89ABD2AFE81EC0092BC7F /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89ABC2AFE81EC0092BC7F /* NewMessageView.swift */; };
 		55BF45312B0E932E00663D6C /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF45302B0E932E00663D6C /* PostDetailView.swift */; };
 		55BF45332B0E969200663D6C /* PostActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF45322B0E969200663D6C /* PostActionsView.swift */; };
+		55BF45352B0E991300663D6C /* PostActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF45342B0E991300663D6C /* PostActionViewModel.swift */; };
 		55C2D12E2AFB4384006C1D0C /* GraceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2D12D2AFB4384006C1D0C /* GraceApp.swift */; };
 		55C2D1302AFB4384006C1D0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2D12F2AFB4384006C1D0C /* ContentView.swift */; };
 		55C2D1322AFB4385006C1D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C2D1312AFB4385006C1D0C /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		55B89ABC2AFE81EC0092BC7F /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		55BF45302B0E932E00663D6C /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		55BF45322B0E969200663D6C /* PostActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionsView.swift; sourceTree = "<group>"; };
+		55BF45342B0E991300663D6C /* PostActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionViewModel.swift; sourceTree = "<group>"; };
 		55C2D12A2AFB4384006C1D0C /* xs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C2D12D2AFB4384006C1D0C /* GraceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraceApp.swift; sourceTree = "<group>"; };
 		55C2D12F2AFB4384006C1D0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				5507D5FC2B0DA3900055BAAD /* SearchViewModel.swift */,
 				5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */,
 				556344A52B0E6E590010D957 /* FeedViewModel.swift */,
+				55BF45342B0E991300663D6C /* PostActionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				5521FAB02B032C8800779248 /* TextArea.swift in Sources */,
 				55D8314E2B04801A00B2712F /* RegistrationView.swift in Sources */,
 				55B89AB32AFE73150092BC7F /* MessageInputView.swift in Sources */,
+				55BF45352B0E991300663D6C /* PostActionViewModel.swift in Sources */,
 				55C2D1302AFB4384006C1D0C /* ContentView.swift in Sources */,
 				556344A62B0E6E590010D957 /* FeedViewModel.swift in Sources */,
 				5507D5FF2B0DA3DA0055BAAD /* Constants.swift in Sources */,
