@@ -10,8 +10,7 @@ import KingfisherSwiftUI
 
 struct ProfileHeaderView: View {
     @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
-    let viewModel: ProfileViewModel
-    @Binding var isFollowed: Bool
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack {
@@ -38,24 +37,25 @@ struct ProfileHeaderView: View {
             HStack(spacing: 40) {
                 VStack
                 {
-                    Text ("138M")
+                    Text("\(viewModel.user.stats.seguidores)")
                         .font(.system(size: 16)).bold()
-                    Text ("Seguidores")
+                    Text("Seguidores")
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
                 
                 VStack
                 {
-                    Text ("12")
+                    Text("\(viewModel.user.stats.siguiendo)")
                         .font(.system(size: 16)).bold()
-                    Text ("Siguiendo")
+                    Text("Siguiendo")
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
             }
             .padding()
-            ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
+            
+            ProfileActionButtonView(viewModel: viewModel)
             
             Spacer()
         }
