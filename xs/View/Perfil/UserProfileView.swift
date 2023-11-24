@@ -23,9 +23,9 @@ struct UserProfileView: View {
                     .padding()
                 
                 // celdas de publicaciones
-                ForEach(0..<9) { post in
-//                    GraceCell()
-//                        .padding()
+                ForEach(viewModel.likedPosts) { post in
+                    GraceCell(post: post)
+                        .padding()
                 }
             }
             .navigationTitle("batman")

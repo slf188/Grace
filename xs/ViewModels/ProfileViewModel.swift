@@ -11,10 +11,15 @@ import Firebase
 class ProfileViewModel: ObservableObject {
     let user: User
     @Published var isFollowed = false
+    // para crear funciones que van hacer fetch de los likes que tiene un post y los posts
+    @Published var userPosts = [Post]()
+    @Published var likedPosts = [Post]()
     
     init(user: User){
         self.user = user
         checkIfUserIsFollowed()
+        fetchUserPosts()
+        fetchLikedPosts()
     }
     
     func follow() {
@@ -45,6 +50,32 @@ class ProfileViewModel: ObservableObject {
         followingRef.document(user.id).getDocument { snapshot, _ in
             guard let isFollowed = snapshot?.exists else { return }
             self.isFollowed = isFollowed
+        }
+    }
+    
+    func fetchUserPosts() {
+        COLLECTION_POSTS.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            self.userPosts = documents.map({ Post(dictionary: $0.data()) })
+        }
+    }
+    
+    func fetchLikedPosts() {
+        // para contar los likes que tiene cada post utilizamos la siguiente variable
+        var posts = [Post]()
+        COLLECTION_USERS.document(user.id).collection("user-likes").getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            let postIDs = documents.map({ $0.documentID })
+            
+            postIDs.forEach { id in
+                COLLECTION_POSTS.document(id).getDocument { snapshot, _ in
+                    guard let data = snapshot?.data() else { return }
+                    let post = Post(dictionary: data)
+                    posts.append(post)
+                    guard posts.count == postIDs.count else { return }
+                    self.likedPosts = posts
+                }
+            }
         }
     }
 }
