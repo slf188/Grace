@@ -22,7 +22,7 @@ struct SearchView: View {
                  ahora lo poblaremos solo con los usuarios que existen
                  registrados en la aplicacion
                  */
-                ForEach(viewModel.users) { user in
+                ForEach(searchText.isEmpty ? viewModel.users : viewModel.filteredUsers(searchText)) { user in
                     HStack {
                         Spacer()
                     }

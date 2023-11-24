@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 /* la clase searchviewmodel tendra observableobject
-lo que permite que sea observable,
+ lo que permite que sea observable,
  esto quiere decir que cualquier cambio que se realice
  habra un listener que va a reconfigurarlo cuando los cambios se realicen
  
@@ -27,5 +27,10 @@ class SearchViewModel: ObservableObject {
             guard let documents = snapshot?.documents else { return }
             self.users = documents.map({ User(dictionary: $0.data()) })
         }
+    }
+    
+    func filteredUsers(_ query: String) -> [User] {
+        let lowercasedQuery = query.lowercased()
+        return users.filter({ $0.fullname.lowercased().contains(lowercasedQuery) || $0.username.contains(lowercasedQuery) })
     }
 }

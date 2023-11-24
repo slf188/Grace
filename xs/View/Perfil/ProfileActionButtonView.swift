@@ -32,7 +32,8 @@ struct ProfileActionButtonView: View {
                         .foregroundColor (.white)
                 })
                 .cornerRadius (20)
-                Button(action: {}, label: {
+                
+                NavigationLink(destination: ChatView(), label: {
                     Text ("Mensajear")
                         .frame(width: 180, height: 40)
                         .background (.black)
