@@ -78,4 +78,11 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
+    func posts(forFilter filter: OpcionesFiltro) -> [Post] {
+        switch filter {
+        case .publicaciones: return userPosts
+        case .likes: return likedPosts
+        }
+    }
 }

@@ -27,8 +27,11 @@ struct SearchView: View {
                         Spacer()
                     }
                     // para llevar al perfil del usuario cuando damos click en la celda de los usuarios
+                    
+                    // aqui llamaremos lazyview
+                    // unicamente se haran llamadas al api cuando hagamos click en el perfil de un usuario
                     NavigationLink(
-                        destination: UserProfileView(user: user),
+                        destination: LazyView(UserProfileView(user: user)),
                         label: {
                             UserCell(user: user)
                         })

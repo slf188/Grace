@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserProfileView: View {
     let user: User
+    @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
     @ObservedObject var viewModel: ProfileViewModel
     
     init(user: User){
@@ -22,13 +23,16 @@ struct UserProfileView: View {
                 ProfileHeaderView(viewModel: viewModel, isFollowed: $viewModel.isFollowed)
                     .padding()
                 
+                FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
+                    .padding()
+                
                 // celdas de publicaciones
-                ForEach(viewModel.likedPosts) { post in
+                ForEach(viewModel.posts(forFilter: filtroSeleccionado)) { post in
                     GraceCell(post: post)
                         .padding()
                 }
             }
-            .navigationTitle("batman")
+            .navigationTitle(user.username)
         }
     }
 }

@@ -11,13 +11,11 @@ import SwiftUI
 // publicaciones, replicas, likes
 enum OpcionesFiltro: Int, CaseIterable {
     case publicaciones
-    case replicas
     case likes
     
     var title: String {
         switch self {
         case .publicaciones: return "Publicaciones"
-        case .replicas: return "Replicas"
         case .likes: return "Likes"
         }
     }

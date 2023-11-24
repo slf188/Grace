@@ -57,9 +57,6 @@ struct ProfileHeaderView: View {
             .padding()
             ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
             
-            FilterButtonView(opcionSeleccionada: $filtroSeleccionado)
-                .padding()
-            
             Spacer()
         }
     }
