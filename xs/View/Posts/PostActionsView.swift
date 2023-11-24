@@ -38,12 +38,14 @@ struct PostActionsView: View {
             Spacer()
             
             Button(action: {
+                // para dar like o no quitar el like
                 viewModel.didlike ? viewModel.unlikePost() : viewModel.likePost()
             }, label: {
-                Image(systemName: viewModel.didLike ? "heart.fill" : "heart")
+                // vamos a utilizar la var didLike de el viewmodel para poder mostrar likes
+                Image(systemName: viewModel.didlike ? "heart.fill" : "heart")
                     .font(.system(size: 16))
                     .frame(width: 32, height: 32)
-                    .foregroundColor(viewModel.didLike ? .red : .gray)
+                    .foregroundColor(Color(viewModel.didlike ? .red : .gray))
                 
             })
             
