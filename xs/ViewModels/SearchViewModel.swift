@@ -12,7 +12,6 @@ import Firebase
  lo que permite que sea observable,
  esto quiere decir que cualquier cambio que se realice
  habra un listener que va a reconfigurarlo cuando los cambios se realicen
- 
  */
 class SearchViewModel: ObservableObject {
     @Published var users = [User]()

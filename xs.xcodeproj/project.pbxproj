@@ -43,6 +43,7 @@
 		55D8314E2B04801A00B2712F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8314D2B04801A00B2712F /* RegistrationView.swift */; };
 		55D831502B04813200B2712F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8314F2B04813200B2712F /* CustomTextField.swift */; };
 		55D831522B04856900B2712F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D831512B04856900B2712F /* CustomSecureField.swift */; };
+		55DAA80C2B10E395006DFA4C /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAA80B2B10E395006DFA4C /* ChatViewModel.swift */; };
 		55E828342AFEB9B300D40D98 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828332AFEB9B300D40D98 /* UserProfileView.swift */; };
 		55E828362AFEBA6D00D40D98 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828352AFEBA6D00D40D98 /* ProfileHeaderView.swift */; };
 		55E828382AFEBA8000D40D98 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E828372AFEBA8000D40D98 /* ProfileActionButtonView.swift */; };
@@ -88,6 +89,7 @@
 		55D8314D2B04801A00B2712F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		55D8314F2B04813200B2712F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		55D831512B04856900B2712F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		55DAA80B2B10E395006DFA4C /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		55E828332AFEB9B300D40D98 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		55E828352AFEBA6D00D40D98 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		55E828372AFEBA8000D40D98 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */,
 				556344A52B0E6E590010D957 /* FeedViewModel.swift */,
 				55BF45342B0E991300663D6C /* PostActionViewModel.swift */,
+				55DAA80B2B10E395006DFA4C /* ChatViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				55E828362AFEBA6D00D40D98 /* ProfileHeaderView.swift in Sources */,
 				55B89AB52AFE73A20092BC7F /* ChatView.swift in Sources */,
 				55BF45332B0E969200663D6C /* PostActionsView.swift in Sources */,
+				55DAA80C2B10E395006DFA4C /* ChatViewModel.swift in Sources */,
 				55B89AAF2AFE6C820092BC7F /* ConversationsView.swift in Sources */,
 				55BF45312B0E932E00663D6C /* PostDetailView.swift in Sources */,
 				55D8314C2B04801400B2712F /* LoginView.swift in Sources */,

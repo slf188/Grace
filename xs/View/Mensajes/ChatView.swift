@@ -9,7 +9,14 @@ import SwiftUI
 
 // contiene la vista de lo que se mostrara en un nuevo mensaje
 struct ChatView: View {
+    let user: User
+    let viewModel: ChatViewModel
     @State var textoMensaje: String = ""
+    
+    init(user: User){
+        self.user = user
+        self.viewModel = ChatViewModel(user: user)
+    }
     
     var body: some View {
         VStack{
@@ -22,14 +29,14 @@ struct ChatView: View {
             }
             .padding(.top)
             
-            MessageInputView(textoMensaje: $textoMensaje)
+            /// atencion::
+            /// no deberiamos tener que pasar el argumento viewModel
+            MessageInputView(viewModel: viewModel, textoMensaje: $textoMensaje, action: sendMessage)
                 .padding()
         }
     }
-}
-
-struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
+    
+    func sendMessage(){
+        viewModel.sendMessage(textoMensaje)
     }
 }
