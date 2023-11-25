@@ -31,9 +31,13 @@ struct ChatView: View {
             
             /// atencion::
             /// no deberiamos tener que pasar el argumento viewModel
+            /// actualizacion:
+            /// en realidad no hace ninguna diferencia si lo pasamos!
             MessageInputView(viewModel: viewModel, textoMensaje: $textoMensaje, action: sendMessage)
                 .padding()
+            
         }
+        .navigationTitle(user.username)
     }
     
     func sendMessage(){
