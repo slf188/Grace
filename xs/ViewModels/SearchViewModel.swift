@@ -8,6 +8,11 @@
 import SwiftUI
 import Firebase
 
+enum SearchViewModelConfiguration {
+    case search
+    case newMessage
+}
+
 /* la clase searchviewmodel tendra observableobject
  lo que permite que sea observable,
  esto quiere decir que cualquier cambio que se realice
@@ -15,16 +20,25 @@ import Firebase
  */
 class SearchViewModel: ObservableObject {
     @Published var users = [User]()
+    private var config: SearchViewModelConfiguration
     
-    init() {
-        fetchUsers()
+    init(config: SearchViewModelConfiguration) {
+        self.config = config
+        fetchUsers(forConfig: config)
     }
     
     // para poder collecionar los datos de los usuarios definidos en la coleccion users
-    func fetchUsers() {
+    func fetchUsers(forConfig config: SearchViewModelConfiguration) {
         COLLECTION_USERS.getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
-            self.users = documents.map({ User(dictionary: $0.data()) })
+            let users = documents.map({ User(dictionary: $0.data()) })
+            
+            switch config {
+            case .newMessage:
+                self.users = users.filter({ !$0.isCurrentUser })
+            case .search:
+                self.users = documents.map({ User(dictionary: $0.data()) })
+            }
         }
     }
     

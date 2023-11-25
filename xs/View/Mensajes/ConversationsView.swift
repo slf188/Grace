@@ -12,23 +12,26 @@ struct ConversationsView: View {
     // las variables con @state nos permiten modificar los valores dentro de un struct
     @State var estaMostrandoMessageView = false
     @State var mostrarChat = false
-    @State private var inSearchMode = false
+    @State var user: User?
     @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing){
-            //            NavigationLink(
-            //                destination: ChatView(),
-            //                isActive: $mostrarChat,
-            //                label: {}
-            //            )
+
+            if let user = user {
+                NavigationLink(
+                    destination: ChatView(user: user),
+                    isActive: $mostrarChat,
+                    label: {}
+                )
+            }
             
             ScrollView {
                 VStack{
                     ForEach(viewModel.recentMessages) { message in
                         // para hacer un link de navegacion que nos lleve a una pagina para ver la conversacion con otro usuario
                         NavigationLink(
-                            destination: ChatView(user: message.user),
+                            destination: LazyView(ChatView(user: message.user)),
                             label: {
                                 ConversationCell(message: message)
                             })
@@ -56,7 +59,7 @@ struct ConversationsView: View {
                 .clipShape(Circle())
                 .padding()
                 .sheet(isPresented: $estaMostrandoMessageView, content: {
-                    NewMessageView(iniciarChat: $mostrarChat, mostrar: $estaMostrandoMessageView)
+                    NewMessageView(iniciarChat: $mostrarChat, mostrar: $estaMostrandoMessageView, user: $user)
                 })
             }
         }

@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct MessageView: View {
-    let message: Mensaje
+    let message: Message
+    
     var body: some View {
         HStack {
             // si el mensaje es del usuario actual mostrar a la derecha
-            if message.esUsuarioActual {
+            if message.isFromCurrentUser {
                 Spacer()
-                Text(message.textoMensaje)
+                Text(message.text)
                     .padding()
                     .background(Color.black)
                     .clipShape(ChatBubble(esUsuarioActual: true))
@@ -23,13 +25,13 @@ struct MessageView: View {
             } else {
                 // si el usuario no es el actual mostrar a la izquierda
                 HStack(alignment: .bottom) {
-                    Image(message.nombreImagen)
+                    KFImage(URL(string: message.user.profileImageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
                     
-                    Text(message.textoMensaje)
+                    Text(message.text)
                         .padding()
                         .background(Color(.systemGray5))
                         .clipShape(ChatBubble(esUsuarioActual: false))
@@ -39,11 +41,5 @@ struct MessageView: View {
                 Spacer()
             }
         }
-    }
-}
-
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageView(message: MENSAJES[1])
     }
 }
