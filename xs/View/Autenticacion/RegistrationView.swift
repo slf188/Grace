@@ -42,7 +42,7 @@ struct RegistrationView: View {
                                 .padding(.top, 88)
                                 .padding(.bottom, 16)
                         } else {
-                            Image ("plus_photo" )
+                            Image("plus_photo")
                                 .resizable()
                                 .renderingMode(.template)
                                 .scaledToFill()
@@ -95,7 +95,9 @@ struct RegistrationView: View {
                         .clipShape(Capsule())
                         .padding ()
                 })
+                
                 Spacer ()
+                
                 HStack {
                     Text("Ya tienes una cuenta?")
                         .font(.system(size: 14))

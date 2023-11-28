@@ -41,6 +41,6 @@ struct Mensaje: Identifiable {
 let MENSAJES: [Mensaje] = [
     .init(id: 0, nombreImagen: "venom-10", textoMensaje: "hey", esUsuarioActual: true),
     .init(id: 1, nombreImagen: "spiderman", textoMensaje: "hola", esUsuarioActual: false),
-    .init(id: 2, nombreImagen: "batman", textoMensaje: "chi", esUsuarioActual: true),
-    .init(id: 3, nombreImagen: "batman", textoMensaje: "noputa", esUsuarioActual: false)
+    .init(id: 2, nombreImagen: "batman", textoMensaje: "sii", esUsuarioActual: true),
+    .init(id: 3, nombreImagen: "batman", textoMensaje: "no", esUsuarioActual: false)
 ]

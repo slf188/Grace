@@ -17,7 +17,7 @@ struct LoginView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Image ("GRACE1" )
+                    Image("GRACE1" )
                         .resizable()
                         .scaledToFill()
                         .frame(width: 220, height: 100)
@@ -38,18 +38,7 @@ struct LoginView: View {
                             .foregroundColor(.white)
                     }
                     .padding(.horizontal, 32)
-
-                    HStack {
-                        Spacer()
-                        Button(action: {}, label: {
-                            Text ("Olvidaste tu contraseña?")
-                                .font(.footnote)
-                                .bold()
-                                .foregroundColor(.white)
-                                .padding(.top, 16)
-                                .padding(.trailing, 32)
-                        })
-                    }
+                    
                     Button(action: {
                         viewModel.login(withEmail: email, password: contraseña)
                     }, label: {
@@ -61,7 +50,8 @@ struct LoginView: View {
                             .clipShape(Capsule())
                             .padding ()
                     })
-                    Spacer ()
+                    
+                    Spacer()
 
                     NavigationLink(
                         // navigationBarBackButtonHidden lo que hace es quitar el boton "back" que se muestra en la esquina superior izquierda de la pantalla

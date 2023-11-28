@@ -35,7 +35,7 @@ struct GraceCell: View {
                             .foregroundColor (.gray)
                     
                         // fecha
-                        Text("2w")
+                        Text(post.timestampString)
                             .foregroundColor (.gray)
                     }
                     // contenido de publicacion

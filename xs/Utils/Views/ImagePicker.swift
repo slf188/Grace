@@ -31,9 +31,11 @@ struct ImagePicker: UIViewControllerRepresentable {
 extension ImagePicker {
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: ImagePicker
+        
         init(_ parent: ImagePicker){
             self.parent = parent
         }
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             guard let image = info[.originalImage] as? UIImage else { return }
             parent.imagen = image

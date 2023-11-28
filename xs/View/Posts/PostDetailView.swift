@@ -33,7 +33,7 @@ struct PostDetailView: View {
             Text(post.caption)
                 .font(.system(size: 22))
             
-            Text("7:22PM • 05/02/2022")
+            Text(post.detailedTimestampString)
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
             

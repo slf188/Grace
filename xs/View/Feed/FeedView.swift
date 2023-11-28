@@ -15,7 +15,7 @@ struct FeedView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView {
-                VStack{
+                LazyVStack{
                     ForEach(viewModel.posts) { post in
                         NavigationLink(destination: PostDetailView(post: post)) {
                             GraceCell(post: post)

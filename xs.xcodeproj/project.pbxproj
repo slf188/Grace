@@ -121,6 +121,7 @@
 		5521FAAA2B0327CE00779248 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				55E93E822AFBF2100033CE2A /* GraceCell.swift */,
 				5521FAAB2B0327F200779248 /* NewPostView.swift */,
 				55BF45302B0E932E00663D6C /* PostDetailView.swift */,
 				55BF45322B0E969200663D6C /* PostActionsView.swift */,
@@ -161,6 +162,32 @@
 				55B89ABC2AFE81EC0092BC7F /* NewMessageView.swift */,
 			);
 			path = Mensajes;
+			sourceTree = "<group>";
+		};
+		55BD335D2B15B2FC002041AF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				55E93E802AFBEFFF0033CE2A /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		55BD335E2B15B418002041AF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				55C2D12F2AFB4384006C1D0C /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		55BD335F2B15B47C002041AF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				55E93E842AFBF8FA0033CE2A /* SearchView.swift */,
+				55E93E882AFBFD580033CE2A /* UserCell.swift */,
+				55E93E862AFBF9D20033CE2A /* SearchBar.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		55C2D1212AFB4384006C1D0C = {
@@ -225,13 +252,10 @@
 		55E93E7D2AFBEFB40033CE2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD335F2B15B47C002041AF /* Search */,
+				55BD335E2B15B418002041AF /* Main */,
 				55E828322AFEB99D00D40D98 /* Perfil */,
-				55C2D12F2AFB4384006C1D0C /* ContentView.swift */,
-				55E93E802AFBEFFF0033CE2A /* FeedView.swift */,
-				55E93E822AFBF2100033CE2A /* GraceCell.swift */,
-				55E93E842AFBF8FA0033CE2A /* SearchView.swift */,
-				55E93E882AFBFD580033CE2A /* UserCell.swift */,
-				55E93E862AFBF9D20033CE2A /* SearchBar.swift */,
+				55BD335D2B15B2FC002041AF /* Feed */,
 				55D8314A2B04800000B2712F /* Autenticacion */,
 				5521FAAA2B0327CE00779248 /* Posts */,
 				55B89AAD2AFE6C630092BC7F /* Mensajes */,

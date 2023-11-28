@@ -17,7 +17,7 @@ struct Post: Identifiable {
     let caption: String
     let likes: Int
     let uid: String
-    let timeStamp: Timestamp
+    let timestamp: Timestamp
     
     init(dictionary: [String: Any]) {
         self.id = dictionary["id"] as? String ?? ""
@@ -27,7 +27,24 @@ struct Post: Identifiable {
         self.caption = dictionary["caption"] as? String ?? ""
         self.likes = dictionary["likes"] as? Int ?? 0
         self.uid = dictionary["uid"] as? String ?? ""
-        self.timeStamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
+        self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
+    }
+    
+    // se lo utiliza solo para mostrar brevemente la fecha del post
+    var timestampString: String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formatter.maximumUnitCount = 1
+        formatter.unitsStyle = .abbreviated
+        return formatter.string(from: timestamp.dateValue(), to: Date()) ?? ""
+    }
+    
+    // se utiliza para mostrar detalladamente la fecha en que se publico el post
+    // para postdetailview
+    var detailedTimestampString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a · MM/dd/yyyy"
+        return formatter.string(from: timestamp.dateValue())
     }
 }
 

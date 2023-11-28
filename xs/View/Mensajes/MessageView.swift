@@ -22,6 +22,8 @@ struct MessageView: View {
                     .clipShape(ChatBubble(esUsuarioActual: true))
                     .foregroundColor(.white)
                     .padding(.horizontal)
+                    .padding(.leading, 100)
+                    .padding(.trailing, 16)
             } else {
                 // si el usuario no es el actual mostrar a la izquierda
                 HStack(alignment: .bottom) {
@@ -38,6 +40,8 @@ struct MessageView: View {
                         .foregroundColor(.black)
                 }
                 .padding(.horizontal)
+                .padding(.leading, 100)
+                .padding(.trailing, 16)
                 Spacer()
             }
         }
