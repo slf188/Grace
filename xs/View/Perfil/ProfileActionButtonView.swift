@@ -14,13 +14,13 @@ struct ProfileActionButtonView: View {
     var body: some View {
         if viewModel.user.isCurrentUser {
             // boton de editar
-            Button(action: {}, label: {
-                Text ("Editar Perfil")
-                    .frame(width: 360, height: 40)
-                    .background(.black)
-                    .foregroundColor(.white)
-            })
-            .cornerRadius (20)
+//            Button(action: {}, label: {
+//                Text ("Editar Perfil")
+//                    .frame(width: 360, height: 40)
+//                    .background(.black)
+//                    .foregroundColor(.white)
+//            })
+//            .cornerRadius(20)
         } else {
             HStack {
                 Button(action: {

@@ -40,8 +40,8 @@ struct MessageView: View {
                         .foregroundColor(.black)
                 }
                 .padding(.horizontal)
-                .padding(.leading, 100)
-                .padding(.trailing, 16)
+//                .padding(.leading, 100)
+//                .padding(.trailing, 16)
                 Spacer()
             }
         }

@@ -33,7 +33,7 @@ struct FeedView: View {
                     .resizable()
                     .renderingMode(.template)
                     // tamano
-                    .frame(width: 32, height: 32)
+                    .frame(width: 28, height: 28)
                     .padding()
             })
             // color

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import KingfisherSwiftUI
+import URLImage
 
 struct ProfileHeaderView: View {
     @State var filtroSeleccionado: OpcionesFiltro = .publicaciones
@@ -15,13 +16,30 @@ struct ProfileHeaderView: View {
     var body: some View {
         VStack {
             // informacion del perfil
+            //            URLImage(URL(string: viewModel.user.profileImageUrl) ?? URL(string: "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg")!) { image in
+            //                image
+            //                    .resizable()
+            //                    .scaledToFill()
+            //                    .clipped()
+            //                    .frame (width: 120, height: 120)
+            //                    .cornerRadius (120 / 2)
+            //                    .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
+            //            }
+            //            AsyncImage(url: URL(string: viewModel.user.profileImageUrl))
+            //                .resizable()
+            //                .scaledToFill()
+            //                .clipped()
+            //                .frame (width: 120, height: 120)
+            //                .cornerRadius (120 / 2)
+            //                .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
             KFImage(URL(string: viewModel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .clipped()
                 .frame (width: 120, height: 120)
                 .cornerRadius (120 / 2)
-                .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
+//                .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
+            
             // nombre
             Text(viewModel.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
@@ -30,10 +48,10 @@ struct ProfileHeaderView: View {
             Text("\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
-            // info
-            Text("vamos a la baticueva")
-                .font(.system(size: 14))
-                .padding(.top, 8)
+            //            // info
+            //            Text("vamos a la baticueva")
+            //                .font(.system(size: 14))
+            //                .padding(.top, 8)
             HStack(spacing: 40) {
                 VStack
                 {

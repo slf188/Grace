@@ -40,18 +40,12 @@ struct ContentView: View {
                                 Text("Mensajes")
                             }
                     }
-                    .navigationBarTitle("Inicio")
+                    // para arreglar abajo
+//                    .navigationBarTitle("Inicio")
                     .navigationBarItems(leading: Button(action: {
                         viewModel.cerrarSesion()
                     }, label: {
-                        if let user = viewModel.user {
-                            KFImage(URL(string: user.profileImageUrl))
-                                .resizable()
-                                .scaledToFill()
-                                .clipped()
-                                .frame(width: 32, height: 32)
-                                .cornerRadius(16)
-                        }
+                        Text("Cerrar Sesion")
                     }))
                     .navigationBarTitleDisplayMode(.inline)
                 }

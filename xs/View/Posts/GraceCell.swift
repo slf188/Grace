@@ -16,6 +16,12 @@ struct GraceCell: View {
             HStack(alignment:.top, spacing: 12){
                 // imagen de usuario
                 KFImage(URL(string: post.profileImageUrl))
+                    .onSuccess(perform: { result in
+                        print("Imagen cargada exitosamente", result.image)
+                    })
+                    .onFailure(perform: { err in
+                        print("Error cargando imagen", err)
+                    })
                     .resizable()
                     .scaledToFill()
                     .clipped()
