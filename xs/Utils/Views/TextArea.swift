@@ -23,7 +23,7 @@ struct TextArea: View {
             if texto.isEmpty {
                 Text(descripcion)
                     .foregroundColor(Color(.placeholderText))
-                padding(.horizontal, 8)
+                    .padding(.horizontal, 8)
                     .padding(.vertical, 12)
             }
             TextEditor(text: $texto)

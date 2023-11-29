@@ -10,11 +10,12 @@ import Kingfisher
 
 struct NewPostView: View {
     @Binding var isPresented: Bool
+    @State var captionText: String = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
+                HStack(alignment: .top) {
                     Image("venom-10")
                         .resizable()
                         .scaledToFill()
@@ -22,8 +23,7 @@ struct NewPostView: View {
                         .frame(width: 64, height: 64)
                         .cornerRadius(32)
                     
-                    Text("whats")
-                        .foregroundColor(.gray)
+                    TextArea("hey", texto: $captionText)
                     
                     Spacer()
                 }
