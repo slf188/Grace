@@ -10,13 +10,13 @@ import Firebase
 
 class UploadPostViewModel: ObservableObject {
     
-    @Binding var isPresented: Bool
+//    @Binding var isPresented: Bool
 //    let user: User
     
-    init(isPresented: Binding<Bool>){
-        self._isPresented = isPresented
-//        self.user = user
-    }
+//    init(isPresented: Binding<Bool>){
+//        self._isPresented = isPresented
+////        self.user = user
+//    }
     
     func uploadPost(caption: String){
         guard let user = AuthViewModel.shared.user else {
@@ -41,7 +41,7 @@ class UploadPostViewModel: ObservableObject {
                 print("Error uploading post: \(error.localizedDescription)")
             } else {
                 print("Post successfully uploaded.")
-                self.isPresented = false
+//                self.isPresented = false
             }
         }
     }

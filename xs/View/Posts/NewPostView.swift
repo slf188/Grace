@@ -11,6 +11,7 @@ import Kingfisher
 struct NewPostView: View {
     @Binding var isPresented: Bool
     @State var captionText: String = ""
+    @ObservedObject var viewModel = UploadPostViewModel()
     
     var body: some View {
         NavigationView {
@@ -33,7 +34,9 @@ struct NewPostView: View {
                 .navigationBarItems(leading: Button(action: { isPresented.toggle() }, label: {
                     Text("Cancel")
                         .foregroundColor(.blue)
-                }), trailing: Button(action: {}, label: {
+                }), trailing: Button(action: {
+                    viewModel.uploadPost(caption: captionText)
+                }, label: {
                     Text("Post")
                         .padding(.horizontal)
                         .padding(.vertical, 8)
