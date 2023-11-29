@@ -16,12 +16,14 @@ struct NewPostView: View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    Image("venom-10")
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 64, height: 64)
-                        .cornerRadius(32)
+                    if let user = AuthViewModel.shared.user {
+                        KFImage(URL(string: user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 64, height: 64)
+                            .cornerRadius(32)
+                    }
                     
                     TextArea("¿Qué está pasando?", texto: $captionText)
                     
@@ -31,8 +33,7 @@ struct NewPostView: View {
                 .navigationBarItems(leading: Button(action: { isPresented.toggle() }, label: {
                     Text("Cancel")
                         .foregroundColor(.blue)
-                }),
-                                    trailing: Button(action: {}, label: {
+                }), trailing: Button(action: {}, label: {
                     Text("Post")
                         .padding(.horizontal)
                         .padding(.vertical, 8)
