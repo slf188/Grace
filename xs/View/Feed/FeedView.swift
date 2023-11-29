@@ -43,14 +43,9 @@ struct FeedView: View {
             .clipShape(Circle())
             .padding()
             // aqui se utiliza el componente fullscreencover para mostrar el view NewPost cuando se cambia a true la variable
-            .sheet(isPresented: $estaMostrandoNuevaPublicacion) {
-                //                Text("hi")
+            // o sheet
+            .fullScreenCover(isPresented: $estaMostrandoNuevaPublicacion) {
                 NewPostView(isPresented: $estaMostrandoNuevaPublicacion)
-                //                if let user = AuthViewModel.shared.user {
-                //                    NewPostView(isPresented: $estaMostrandoNuevaPublicacion, user: user)
-                //                } else {
-                //                    Text("User not available")
-                //                }
             }
         }
     }

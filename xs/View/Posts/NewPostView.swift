@@ -11,7 +11,12 @@ import Kingfisher
 struct NewPostView: View {
     @Binding var isPresented: Bool
     @State var captionText: String = ""
-    @ObservedObject var viewModel = UploadPostViewModel()
+    @ObservedObject var viewModel: UploadPostViewModel
+    
+    init(isPresented: Binding<Bool>){
+        self._isPresented = isPresented
+        self.viewModel = UploadPostViewModel(isPresented: isPresented)
+    }
     
     var body: some View {
         NavigationView {
