@@ -43,19 +43,4 @@ class UploadPostViewModel: ObservableObject {
             }
         }
     }
-    
-    //    func uploadPost(caption: String, completion: @escaping((Error?) -> Void)){
-    //        guard let user = AuthViewModel.shared.user else { return }
-    //        let docRef = COLLECTION_POSTS.document()
-    //        let data: [String: Any] = ["uid": user.id,
-    //                                   "caption": caption,
-    //                                   "fullname": user.fullname,
-    //                                   "timestamp": Timestamp(date: Date()),
-    //                                   "username": user.username,
-    //                                   "profileImageUrl": user.profileImageUrl,
-    //                                   "likes": 0,
-    //                                   "id": docRef.documentID]
-    //
-    //        docRef.setData(data, completion: completion)
-    //    }
 }
