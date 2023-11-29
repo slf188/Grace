@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+import Kingfisher
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    
     
     var body: some View {
         // group nos ayudara a separar las pantallas que se mostraran en el inicio de la aplicacion

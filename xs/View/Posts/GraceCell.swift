@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+import Kingfisher
 
 // aqui definimos las celdas de las publicaciones
 struct GraceCell: View {
@@ -16,10 +16,10 @@ struct GraceCell: View {
             HStack(alignment:.top, spacing: 12){
                 // imagen de usuario
                 KFImage(URL(string: post.profileImageUrl))
-                    .onSuccess(perform: { result in
+                    .onSuccess({ result in
                         print("Imagen cargada exitosamente", result.image)
                     })
-                    .onFailure(perform: { err in
+                    .onFailure({ err in
                         print("Error cargando imagen", err)
                     })
                     .resizable()

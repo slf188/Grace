@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+import Kingfisher
 import URLImage
 
 struct ProfileHeaderView: View {
@@ -15,24 +15,10 @@ struct ProfileHeaderView: View {
     
     var body: some View {
         VStack {
-            // informacion del perfil
-            //            URLImage(URL(string: viewModel.user.profileImageUrl) ?? URL(string: "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg")!) { image in
-            //                image
-            //                    .resizable()
-            //                    .scaledToFill()
-            //                    .clipped()
-            //                    .frame (width: 120, height: 120)
-            //                    .cornerRadius (120 / 2)
-            //                    .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
-            //            }
-            //            AsyncImage(url: URL(string: viewModel.user.profileImageUrl))
-            //                .resizable()
-            //                .scaledToFill()
-            //                .clipped()
-            //                .frame (width: 120, height: 120)
-            //                .cornerRadius (120 / 2)
-            //                .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
             KFImage(URL(string: viewModel.user.profileImageUrl))
+                .onSuccess({ result in
+                    print("este es el url de la imagen \(String(describing: URL(string: viewModel.user.profileImageUrl)))", result)
+                })
                 .resizable()
                 .scaledToFill()
                 .clipped()

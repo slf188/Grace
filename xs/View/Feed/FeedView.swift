@@ -12,6 +12,7 @@ struct FeedView: View {
     @State var estaMostrandoNuevaPublicacion = false
     @ObservedObject var viewModel = FeedViewModel()
     
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView {
@@ -32,7 +33,7 @@ struct FeedView: View {
                 Image(systemName: "plus")
                     .resizable()
                     .renderingMode(.template)
-                    // tamano
+                // tamano
                     .frame(width: 28, height: 28)
                     .padding()
             })
@@ -42,8 +43,14 @@ struct FeedView: View {
             .clipShape(Circle())
             .padding()
             // aqui se utiliza el componente fullscreencover para mostrar el view NewPost cuando se cambia a true la variable
-            .fullScreenCover(isPresented: $estaMostrandoNuevaPublicacion) {
+            .sheet(isPresented: $estaMostrandoNuevaPublicacion) {
+                //                Text("hi")
                 NewPostView(isPresented: $estaMostrandoNuevaPublicacion)
+                //                if let user = AuthViewModel.shared.user {
+                //                    NewPostView(isPresented: $estaMostrandoNuevaPublicacion, user: user)
+                //                } else {
+                //                    Text("User not available")
+                //                }
             }
         }
     }

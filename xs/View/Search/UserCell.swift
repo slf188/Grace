@@ -7,7 +7,7 @@
 
 import SwiftUI
 // kingfisher es la libreria que nos permitira render imagenes en la aplicacion
-import KingfisherSwiftUI
+import Kingfisher
 
 struct UserCell: View {
     // para que nosotros podamos hacer un fetch y poder poblar el nombre del usuario y su nombre
