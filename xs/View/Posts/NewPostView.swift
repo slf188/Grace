@@ -23,7 +23,7 @@ struct NewPostView: View {
                         .frame(width: 64, height: 64)
                         .cornerRadius(32)
                     
-                    TextArea("hey", texto: $captionText)
+                    TextArea("¿Qué está pasando?", texto: $captionText)
                     
                     Spacer()
                 }
