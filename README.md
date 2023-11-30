@@ -69,6 +69,7 @@ En caso de que no se disponga de Git en la computadora, se puede instalar el rep
 - [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
 - [Changing image size in Markdown](https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown)
 - [SwiftUI Manual](https://developer.apple.com/documentation/swiftui/)
+- [Add Firebase to your Apple project](https://firebase.google.com/docs/ios/setup)
 - [Firebase Authentication](https://firebase.google.com/docs/auth/ios/password-auth)
 - [Firebase Firestore](https://firebase.google.com/docs/firestore)
 - [Firebase Storage](https://firebase.google.com/docs/storage)
