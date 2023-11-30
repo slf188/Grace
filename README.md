@@ -23,7 +23,7 @@ Construida con sólidos principios de modelado y arquitecturas de desarrollo de 
 - [GitHub](https://github.com/)
 - [GitHub CLI](https://cli.github.com/)
 - [Fig](https://fig.io/)
-- [Hugging Face)[https://huggingface.co/]
+- [Hugging Face](https://huggingface.co/)
 - [Swift Package Manager](https://github.com/apple/swift-package-manager)
 - [Llama 2](https://huggingface.co/)
 - [Neovim](https://neovim.io/)
@@ -66,6 +66,7 @@ En caso de que no se disponga de Git en la computadora, se puede instalar el rep
 - [What is the @State property wrapper?](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-state-property-wrapper#:~:text=SwiftUI%20uses%20the%20%40State%20property,shared%20storage%20managed%20by%20SwiftUI)
 - [What is the @Binding property wrapper?](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-binding-property-wrapper)
 - [Command CompileSwift failed with a nonzero exit code in Xcode 10 [duplicate]](https://stackoverflow.com/questions/52387452/command-compileswift-failed-with-a-nonzero-exit-code-in-xcode-10/53007533#53007533)
+- [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
 
 ## Licencia
 
