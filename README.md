@@ -57,7 +57,7 @@ $ git clone [el codigo HTTPS del repositorio]
 
 En caso de que no se disponga de Git en la computadora, se puede instalar el repositorio en forma de ZIP, presionando en donde dice "Download ZIP".
 
-![inst.png](inst.png)
+<img src="inst.png" alt="inst" width="500"/>
 
 ## Referencias
 
@@ -67,10 +67,11 @@ En caso de que no se disponga de Git en la computadora, se puede instalar el rep
 - [What is the @Binding property wrapper?](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-binding-property-wrapper)
 - [Command CompileSwift failed with a nonzero exit code in Xcode 10 [duplicate]](https://stackoverflow.com/questions/52387452/command-compileswift-failed-with-a-nonzero-exit-code-in-xcode-10/53007533#53007533)
 - [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
+- [Changing image size in Markdown](https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown)
 
 ## Licencia
 
-[MIT](LICENSE)
+[LICENSE](LICENSE)
 
 ## Autor
 
