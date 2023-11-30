@@ -68,6 +68,11 @@ En caso de que no se disponga de Git en la computadora, se puede instalar el rep
 - [Command CompileSwift failed with a nonzero exit code in Xcode 10 [duplicate]](https://stackoverflow.com/questions/52387452/command-compileswift-failed-with-a-nonzero-exit-code-in-xcode-10/53007533#53007533)
 - [How do I properly force a Git push?](https://stackoverflow.com/questions/5509543/how-do-i-properly-force-a-git-push)
 - [Changing image size in Markdown](https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown)
+- [SwiftUI Manual](https://developer.apple.com/documentation/swiftui/)
+- [Firebase Authentication](https://firebase.google.com/docs/auth/ios/password-auth)
+- [Firebase Firestore](https://firebase.google.com/docs/firestore)
+- [Firebase Storage](https://firebase.google.com/docs/storage)
+- [Firesbase Security Rules](https://firebase.google.com/docs/rules)
 
 ## Licencia
 
