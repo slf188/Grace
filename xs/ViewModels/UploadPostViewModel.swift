@@ -30,10 +30,6 @@ class UploadPostViewModel: ObservableObject {
                                    "profileImageUrl": user.profileImageUrl,
                                    "likes": 0,
                                    "id": docRef.documentID]
-        //        docRef.setData(data) { _ in
-        //            print("exitosamente se publico el post")
-        //            self.isPresented = false
-        //        }
         docRef.setData(data) { error in
             if let error = error {
                 print("Error uploading post: \(error.localizedDescription)")

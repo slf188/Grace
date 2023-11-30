@@ -62,6 +62,8 @@
 		5507D5FE2B0DA3DA0055BAAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5507D6032B0DB37A0055BAAD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		550D578B2B10ED7E00E3660B /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
+		552165D92B18076600C78A74 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		552165DB2B180DE600C78A74 /* CAPTURAS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CAPTURAS.md; sourceTree = "<group>"; };
 		5521FAAF2B032C8800779248 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		552DDB142B0C71850086F8B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		554EA1D82B1050B60083D533 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552165DA2B180DB900C78A74 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				552165DB2B180DE600C78A74 /* CAPTURAS.md */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
 		5521FAAA2B0327CE00779248 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,8 @@
 				55E93E7F2AFBEFD00033CE2A /* ViewModels */,
 				55C2D1312AFB4385006C1D0C /* Assets.xcassets */,
 				55C2D1332AFB4385006C1D0C /* Preview Content */,
+				552165D92B18076600C78A74 /* README.md */,
+				552165DA2B180DB900C78A74 /* Docs */,
 			);
 			path = xs;
 			sourceTree = "<group>";
