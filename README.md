@@ -1,5 +1,7 @@
 # Grace
 
+<img src="grace.jpeg" alt="inst" width="300"/>
+
 ## Descripción
 
 Construida con sólidos principios de modelado y arquitecturas de desarrollo de software, Grace es una aplicación iOS que redefine la experiencia del usuario al integrar un diseño modular que facilita la escalabilidad y mantenimiento. Con un modelo de datos robusto y una arquitectura MVVM bien estructurada, ofrecemos un rendimiento optimizado y una navegación fluida, garantizando una aplicación eficiente y fácil de mantener.
