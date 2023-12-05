@@ -22,7 +22,7 @@ struct Post: Identifiable {
     init(dictionary: [String: Any]) {
         self.id = dictionary["id"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
-        self.profileImageUrl = dictionary["profilelmageUrl"] as? String ?? ""
+        self.profileImageUrl = dictionary["profilelmageUrl"] as? String ??  "https://einercial.com/wp-content/uploads/2018/04/Facebook-no-profile-picture-icon-620x389.jpg"
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.caption = dictionary["caption"] as? String ?? ""
         self.likes = dictionary["likes"] as? Int ?? 0

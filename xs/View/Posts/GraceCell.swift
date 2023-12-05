@@ -10,6 +10,7 @@ import Kingfisher
 
 // aqui definimos las celdas de las publicaciones
 struct GraceCell: View {
+    
     let post: Post
     var body: some View {
         VStack(alignment: .leading){
